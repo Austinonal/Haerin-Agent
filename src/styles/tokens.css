@@ -1,0 +1,106 @@
+/* Design tokens: the only place colors, type, spacing and motion values are defined. */
+:root {
+  --font-sans: 'Noto Sans Thai', 'Leelawadee UI', 'Sukhumvit Set', 'Thonburi', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'SFMono-Regular', Consolas, monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --leading: 1.7; /* Thai needs room for vowels and tone marks */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --duration: 160ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+
+  --sidebar-w: 280px;
+  --content-w: 46rem;
+  --touch: 44px;
+  --z-drawer: 20;
+  --z-dialog: 30;
+
+  /* Light: off-white paper, charcoal ink, muted slate-blue accent */
+  --bg: #f6f5f1;
+  --surface: #fbfaf7;
+  --surface-raised: #ffffff;
+  --surface-sunken: #eeece6;
+  --border: #dedbd3;
+  --text: #26272b;
+  --text-muted: #62646b; /* 5.6:1 on --bg */
+  --accent: #4b6884; /* 5.9:1 on --bg */
+  --accent-soft: #e3e9ef;
+  --on-accent: #ffffff;
+  --danger: #a33a32;
+  --danger-soft: #f6e4e1;
+  --success: #3c6e4f;
+  --warning: #8a6116;
+  --focus-ring: #4b6884;
+  --shadow-1: 0 1px 2px rgb(30 30 30 / 0.06);
+  --shadow-2: 0 8px 28px rgb(30 30 30 / 0.12);
+  --scrim: rgb(20 20 22 / 0.4);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #161719;
+    --surface: #1c1d20;
+    --surface-raised: #232428;
+    --surface-sunken: #121315;
+    --border: #2f3136;
+    --text: #e7e5e0;
+    --text-muted: #a3a29e;
+    --accent: #93acc6;
+    --accent-soft: #263240;
+    --on-accent: #12161b;
+    --danger: #e08b82;
+    --danger-soft: #3a2422;
+    --success: #8cc3a0;
+    --warning: #d9b46a;
+    --focus-ring: #93acc6;
+    --shadow-1: 0 1px 2px rgb(0 0 0 / 0.3);
+    --shadow-2: 0 10px 32px rgb(0 0 0 / 0.45);
+    --scrim: rgb(0 0 0 / 0.55);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #161719;
+  --surface: #1c1d20;
+  --surface-raised: #232428;
+  --surface-sunken: #121315;
+  --border: #2f3136;
+  --text: #e7e5e0;
+  --text-muted: #a3a29e;
+  --accent: #93acc6;
+  --accent-soft: #263240;
+  --on-accent: #12161b;
+  --danger: #e08b82;
+  --danger-soft: #3a2422;
+  --success: #8cc3a0;
+  --warning: #d9b46a;
+  --focus-ring: #93acc6;
+  --shadow-1: 0 1px 2px rgb(0 0 0 / 0.3);
+  --shadow-2: 0 10px 32px rgb(0 0 0 / 0.45);
+  --scrim: rgb(0 0 0 / 0.55);
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration: 0ms;
+  }
+}

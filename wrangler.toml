@@ -1,0 +1,14 @@
+name = "haerin-agent-api"
+main = "workers/src/index.ts"
+compatibility_date = "2026-09-01"
+
+[vars]
+# Gemini model ID. Check the current list at https://ai.google.dev/gemini-api/docs/models
+# A "-latest" alias follows new releases; pin an exact stable ID if you want fixed behavior.
+GEMINI_MODEL = "gemini-flash-latest"
+# Comma-separated list of frontend origins allowed to call this API.
+ALLOWED_ORIGINS = "http://localhost:5173,http://127.0.0.1:5173,http://localhost:4173"
+
+# GEMINI_API_KEY is a SECRET. Never put it here. Set it with:
+#   local dev:  create .dev.vars containing GEMINI_API_KEY=...
+#   deployed:   npx wrangler secret put GEMINI_API_KEY

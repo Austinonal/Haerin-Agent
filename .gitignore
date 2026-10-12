@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.wrangler/
+*.tsbuildinfo
+# secrets
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+*.pem
+*.key
+# misc
+.DS_Store
+*.log
+test-results/
